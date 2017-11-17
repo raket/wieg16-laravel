@@ -10,16 +10,17 @@ Efter att du har gjort färdigt dina migrationer och testat dem så skriver du e
 1. Gör migrationer via php artisan make:migration - en för varje tabell
 2. Gör ett konsollkommando via  php artisan make:command ImportCustomers
 3. Ge kommandot signaturen import:customers
-4. Ta curl-koden från den gemensamma övningen. Du behöver inte spara datan i en fil nu.
-5. Gör en Customer-modell via php artisan make:model Customer
-6. Justera modellens inställningar så att id inte är autoinkrementerande och timestamps är avstängt.
-7. Skriv en whitelist via $fillable som innehåller alla fält i tabellen.
-8. Gör hela modell-biten för din adresstabell också.
-9. Loopa igenom datan och sätt in datan i databasen via dina modeller.
-10. Kolla om modellen redan finns via Customer::find($id). Om modellen inte finns så blir det null.
-11. Om modellen inte redan finns gör en ny via $customer = new Customer();
-12. Spara med $customer->save()
-13. Gör samma sak med adresserna!
+4. Allting görs i handle-metoden!
+5. Ta curl-koden från den gemensamma övningen. Du behöver inte spara datan i en fil nu.
+6. Gör en Customer-modell via php artisan make:model Customer
+7. Justera modellens inställningar så att id inte är autoinkrementerande och timestamps är avstängt.
+8. Skriv en whitelist via $fillable som innehåller alla fält i tabellen.
+9. Gör hela modell-biten för din adresstabell också.
+10. Loopa igenom datan och sätt in datan i databasen via dina modeller.
+11. Kolla om modellen redan finns via Customer::find($id). Om modellen inte finns så blir det null.
+12. Om modellen inte redan finns gör en ny via $customer = new Customer();
+13. Spara med $customer->save()
+14. Gör samma sak med adresserna!
 
 ## Övning 2
 Nu är det dags att börja exponera den data som du hämtat hem i Laravel.
